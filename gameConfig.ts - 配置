@@ -1,0 +1,29 @@
+export const GAME_CONFIG = {
+  // Game constants
+  GRID_SIZE: 32,
+  FLOOR_WIDTH: 40,
+  FLOOR_HEIGHT: 22,
+  MAX_FLOORS: 7,
+  BOSS_FLOOR: 7,
+  
+  // Balance
+  STARTING_HP_MULTIPLIER: 1.0,
+  STARTING_CHEER_METER: 0,
+  MAX_CHEER_METER: 100,
+  
+  // Room types
+  ROOM_TYPES: {
+    BATTLE: 'battle',
+    SHOP: 'shop',
+    HEALING: 'healing',
+    EVENT: 'event',
+    BOSS: 'boss',
+    TREASURE: 'treasure',
+  },
+};
+
+export const GAME_DIFFICULTY = {
+  ENEMY_HEALTH_SCALING: 1.15,
+  ENEMY_DAMAGE_SCALING: 1.1,
+  FLOOR_MULTIPLIER: (floor: number) => Math.pow(1.2, floor - 1),
+};
